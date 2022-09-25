@@ -1,0 +1,17 @@
+{
+  "title": "DIL",
+  "description": "Romantic",
+  "duration": "02:10:20",
+  "language": "HINDI",
+  "releaseDate": "2022-09-25",
+  "country": "INDIA",
+  "genre": "Romantic",
+  "shows": [
+    {
+      "date": "2022-09-25",
+      "startTime": "08:00:00",
+      "endTime": "11:00:00",
+      "id": 3
+    }
+  ]
+}

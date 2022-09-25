@@ -1,7 +1,7 @@
 package com.assessment.theater.controller.onboarding;
 
 import com.assessment.theater.model.city.CityRequest;
-import com.assessment.theater.service.CinemaService;
+import com.assessment.theater.service.cinema.CinemaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;

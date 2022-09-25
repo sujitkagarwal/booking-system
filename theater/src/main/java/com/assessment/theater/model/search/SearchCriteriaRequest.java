@@ -1,4 +1,4 @@
-package com.assessment.theater.model.Search;
+package com.assessment.theater.model.search;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 public class SearchCriteriaRequest {
 
     @NotNull
-    private final String type;
+    private final SearchType type;
 
     @NotNull
     private final String value;

@@ -1,4 +1,4 @@
-package com.assessment.theater.model.Search;
+package com.assessment.theater.model.search;
 
 import lombok.Builder;
 import lombok.Getter;

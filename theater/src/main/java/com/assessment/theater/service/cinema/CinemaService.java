@@ -1,4 +1,4 @@
-package com.assessment.theater.service;
+package com.assessment.theater.service.cinema;
 
 import com.assessment.theater.model.city.CityRequest;
 

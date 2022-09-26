@@ -1,0 +1,10 @@
+
+
+## Number of Theater Pod
+replicaCount: 1
+
+imagePullPolicy: IfNotPresent
+
+servicePort: 8080
+
+

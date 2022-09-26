@@ -1,0 +1,5 @@
+dependencies:
+- name: theater
+  version: 0.0.1
+  repository: file://./charts/theater
+  condition: theater.enabled

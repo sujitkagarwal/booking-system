@@ -2,7 +2,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "cp-schema-registry.name" -}}
+{{- define "theater.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
@@ -11,7 +11,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "cp-schema-registry.fullname" -}}
+{{- define "theater.fullname" -}}
 {{- if .Values.fullnameOverride -}}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
 {{- else -}}
@@ -27,7 +27,7 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "cp-schema-registry.chart" -}}
+{{- define "theater.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
@@ -44,7 +44,7 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
 Form the Kafka URL. If Kafka is installed as part of this chart, use k8s service discovery,
 else use user-provided URL
 */}}
-{{- define "cp-schema-registry.kafka.bootstrapServers" -}}
+{{- define "theater.kafka.bootstrapServers" -}}
 {{- if .Values.kafka.bootstrapServers -}}
 {{- .Values.kafka.bootstrapServers -}}
 {{- else -}}
@@ -55,7 +55,7 @@ else use user-provided URL
 {{/*
 Default GroupId to Release Name but allow it to be overridden
 */}}
-{{- define "cp-schema-registry.groupId" -}}
+{{- define "theater.groupId" -}}
 {{- if .Values.overrideGroupId -}}
 {{- .Values.overrideGroupId -}}
 {{- else -}}

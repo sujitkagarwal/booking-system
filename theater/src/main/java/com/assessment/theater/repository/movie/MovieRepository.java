@@ -1,4 +1,4 @@
-package com.assessment.theater.repository;
+package com.assessment.theater.repository.movie;
 
 import com.assessment.theater.entity.movie.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;

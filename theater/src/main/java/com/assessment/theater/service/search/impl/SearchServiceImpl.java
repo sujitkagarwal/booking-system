@@ -3,7 +3,7 @@ package com.assessment.theater.service.search.impl;
 import com.assessment.theater.entity.city.City;
 import com.assessment.theater.model.search.MovieResponse;
 import com.assessment.theater.model.search.SearchCriteriaRequest;
-import com.assessment.theater.repository.CityRepository;
+import com.assessment.theater.repository.city.CityRepository;
 import com.assessment.theater.service.search.SearchService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

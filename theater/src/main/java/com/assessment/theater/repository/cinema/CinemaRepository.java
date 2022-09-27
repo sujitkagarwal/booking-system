@@ -1,4 +1,4 @@
-package com.assessment.theater.repository;
+package com.assessment.theater.repository.cinema;
 
 import com.assessment.theater.entity.cinema.Cinema;
 import com.assessment.theater.entity.city.City;

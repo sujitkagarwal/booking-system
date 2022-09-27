@@ -1,4 +1,2 @@
-This chart installs a Confluent Kafka Schema Registry
-
-https://github.com/confluentinc/schema-registry
+This chart install a booking system
 

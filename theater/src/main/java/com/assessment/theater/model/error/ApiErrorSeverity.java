@@ -5,10 +5,8 @@ import org.springframework.http.HttpStatus;
 
 public enum ApiErrorSeverity {
 
-    CRITICAL,
     ERROR,
-    WARNING,
-    INFO;
+    WARNING;
 
     public static ApiErrorSeverity getSeverityByStatus(@NonNull HttpStatus httpStatus) {
         if (httpStatus == HttpStatus.NOT_FOUND) {

@@ -3,7 +3,7 @@ package com.assessment.theater.conversion;
 import com.assessment.theater.entity.Show;
 import com.assessment.theater.entity.cinema.CinemaHall;
 import com.assessment.theater.model.ShowRequest;
-import com.assessment.theater.repository.CinemaHallRepository;
+import com.assessment.theater.repository.cinema.CinemaHallRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

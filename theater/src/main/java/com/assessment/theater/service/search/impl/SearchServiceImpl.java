@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @Service
 @AllArgsConstructor
@@ -16,18 +17,18 @@ public class SearchServiceImpl implements SearchService {
 
     private final CityRepository cityRepository;
     @Override
-    public MovieResponse findMovie(SearchCriteriaRequest searchCriteriaRequest) {
+    public CompletableFuture<MovieResponse> findMovie(SearchCriteriaRequest searchCriteriaRequest) {
 
         List<City> byName = cityRepository.findByName(searchCriteriaRequest.getValue());
 
       /*  byName.stream().map(city ->
 
-                city.getCinema().stream().map()
+                 city.getCinema().stream().map()
 
 
                 )
 
         */
-        return null;
+        return CompletableFuture.completedFuture(MovieResponse.builder().build());
     }
 }

@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.CompletableFuture;
+
 @Service
 @AllArgsConstructor
 public class CinemaServiceImpl implements CinemaService {
@@ -16,7 +18,7 @@ public class CinemaServiceImpl implements CinemaService {
     private final CityRepository cityRepository;
 
     @Override
-    public void onboardCinema(CityRequest cityRequest) {
-        cityRepository.save(cityConverter.convert(cityRequest));
+    public CompletableFuture<Void> onboardCinema(CityRequest cityRequest) {
+        return CompletableFuture.runAsync(() -> cityRepository.save(cityConverter.convert(cityRequest)));
     }
 }

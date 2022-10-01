@@ -8,14 +8,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
+import java.util.concurrent.CompletableFuture;
+
 @RequiredArgsConstructor
 @Component
 public class MovieServiceImpl implements MovieService {
 
     private final Converter<MovieRequest, Movie> converter;
     private final MovieRepository movieRepository;
+
     @Override
-    public void addMovie(MovieRequest movieRequest) {
-        movieRepository.save(converter.convert(movieRequest));
+    public CompletableFuture<Void> addMovie(MovieRequest movieRequest) {
+        return CompletableFuture.runAsync(() -> movieRepository.save(converter.convert(movieRequest)));
     }
 }

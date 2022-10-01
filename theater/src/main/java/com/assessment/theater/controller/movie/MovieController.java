@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequiredArgsConstructor
@@ -23,7 +24,7 @@ public class MovieController {
     }
 
     @PostMapping("/movie")
-    public void addMovie(@Valid @RequestBody MovieRequest movieRequest){
-        movieService.addMovie(movieRequest);
+    public CompletableFuture<Void> addMovie(@Valid @RequestBody MovieRequest movieRequest){
+       return movieService.addMovie(movieRequest);
     }
 }

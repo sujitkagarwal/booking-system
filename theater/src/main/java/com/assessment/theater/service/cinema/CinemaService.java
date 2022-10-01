@@ -2,6 +2,8 @@ package com.assessment.theater.service.cinema;
 
 import com.assessment.theater.model.city.CityRequest;
 
+import java.util.concurrent.CompletableFuture;
+
 public interface CinemaService {
- void onboardCinema(CityRequest cityRequest);
+ CompletableFuture<Void> onboardCinema(CityRequest cityRequest);
 }

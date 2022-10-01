@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+import java.util.concurrent.CompletableFuture;
+
 import static com.assessment.theater.util.Validator.checkSuppressedFields;
 
 @RestController
@@ -27,7 +29,7 @@ public class SearchController {
     }
 
 
-    public MovieResponse searchMovie(@Valid SearchCriteriaRequest searchCriteriaRequest, BindingResult bindingResult) {
+    public CompletableFuture<MovieResponse> searchMovie(@Valid SearchCriteriaRequest searchCriteriaRequest, BindingResult bindingResult) {
         checkSuppressedFields(bindingResult);
         return searchService.findMovie(searchCriteriaRequest);
     }

@@ -20,15 +20,7 @@ public class SearchServiceImpl implements SearchService {
     public CompletableFuture<MovieResponse> findMovie(SearchCriteriaRequest searchCriteriaRequest) {
 
         List<City> byName = cityRepository.findByName(searchCriteriaRequest.getValue());
-
-      /*  byName.stream().map(city ->
-
-                 city.getCinema().stream().map()
-
-
-                )
-
-        */
+        //TO do implementation for search using factory pattern
         return CompletableFuture.completedFuture(MovieResponse.builder().build());
     }
 }
